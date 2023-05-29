@@ -11,3 +11,35 @@
     border:none;
     font-size: 16px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+  transition: color 2s ease-in-out;
+}
+
+form button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3 ease-in-out;
+}
+
+form button[type='submit']:hover {
+  /* background-color: var(--primary-bg); */
+  background-color: red;
+}
