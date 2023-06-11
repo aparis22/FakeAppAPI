@@ -1,0 +1,25 @@
+.favorites-container{
+    min-height: 90vh;
+}
+
+.favorites-dark{
+    background-color: black;
+    color:white;
+ }
+
+.favorites-container h1{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.favorite-characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.favorite-characters .fav-alert {
+    color: gray;
+}

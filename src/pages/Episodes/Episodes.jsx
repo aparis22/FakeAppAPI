@@ -2,9 +2,16 @@ import React from 'react'
 import './Episodes.css'
 import axios from 'axios'
 import CharacterCard from '../../components/CharacterCard/CharacterCard'
-CharacterCard
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/ThemeContext'
+
 
 function Episodes() {
+
+  // use context for global state
+  //NOTE {} NOT []
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
+
   //create state for episode options
   const [options, setOptions] = React.useState([])
   const [selectedOption, setSelectedOption] = React.useState(1)
@@ -83,7 +90,8 @@ function Episodes() {
   )
 
   return (
-    <div className="episodes-container">
+    <div className={darkMode?
+      "episodes-container episodes-dark":"episodes-container"}>
       <div>
         <label>Select an episode:</label>
         <select id='select-episode' onChange={handleSelectChange}>

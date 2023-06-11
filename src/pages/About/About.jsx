@@ -1,10 +1,18 @@
 import React from 'react'
 import './About.css'
 import banner from '../../assets/banner.jpeg'
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/ThemeContext'
 
 function About() {
+
+  // use context for global state
+  //NOTE {} NOT []
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
+
   return (
-    <div className="about-container">
+    <div className={darkMode?
+      "about-container about-dark":"about-container"}>
       <img src={banner}/>
       <h1>About Us</h1>
       <p>Rick and Morty is an American adult animated science-fiction 
